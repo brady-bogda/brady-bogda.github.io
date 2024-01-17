@@ -17,3 +17,60 @@ window.addEventListener('scroll', () => {
 
   requestAnimationFrame(() => updateImage(frameIndex + 1));
 });
+
+$(document).ready(async function () {
+  carousel(carouselText, '#sentence');
+});
+
+// type writer
+async function typeSentence(sentence, eleRef, delay = 100) {
+  const letters = sentence.split('');
+  let i = 0;
+  while (i < letters.length) {
+    await waitForMs(delay);
+    $(eleRef).append(letters[i]);
+    i++;
+  }
+  return;
+}
+
+async function deleteSentence(eleRef) {
+  const sentence = $(eleRef).html();
+  const letters = sentence.split('');
+  let i = 0;
+  while (letters.length > 0) {
+    await waitForMs(100);
+    letters.pop();
+    $(eleRef).html(letters.join(''));
+  }
+}
+
+function waitForMs(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const carouselText = [
+  { text: 'Computer Science Student' },
+  { text: 'Software Engineer' },
+  { text: 'Backend Developer' },
+  { text: 'Mathematician' },
+  // { text: 'Engineer' },
+  { text: 'Skier and Home Cook' },
+];
+
+async function carousel(carouselList, eleRef) {
+  var i = 0;
+  while (true) {
+    await typeSentence(carouselList[i].text, eleRef);
+    await waitForMs(2000);
+    await deleteSentence(eleRef);
+    await waitForMs(500);
+    i++;
+    if (i >= carouselList.length) {
+      i = 0;
+      await typeSentence('Computer Science Student, Developer, & Engineer', eleRef);
+      await waitForMs(2000);
+      break;
+    }
+  }
+}
