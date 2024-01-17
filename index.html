@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brady Bogda</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img id="mountain-picture" class="mountain" src="images/ski-silhouette2.png" />
+    <script src="script.js"></script>
+    <div class="intro">
+      <!-- <div class="container"> -->
+      <div class="row">
+        <div class="left-column">
+          <img class="profile-picture" src="images/headshot.png" />
+          <h1>Brady Bogda</h1>
+          <a href="#experience"><h3>Experience</h3></a>
+          <a href="#projects"><h3>Projects</h3></a>
+          <a href="#education"><h3>Education</h3></a>
+
+          <div class="links">
+            <a href="mailto:bbogda@umich.edu"
+              ><img class="icon-picture" src="images/email-icon.png"
+            /></a>
+            <a href="https://github.com/brady-bogda" target="_blank"
+              ><img class="icon-picture" src="images/github-mark-white.png"
+            /></a>
+            <a href="https://linkedin.com/in/brady-bogda/" target="_blank"
+              ><img class="icon-picture" src="images/In-Blue-40@2x.png"
+            /></a>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hey, my name is Brady and I'm studying Computer Science at the University of Michigan.
+            </p>
+            <p>
+              I'm pursing a career in software engineering, interested in solving data driven
+              problems. I have internship experience in full-stack developement using React,
+              Javascript, GraphQL; and in data migration using Python, Google Cloud SDK, Salesforce
+              API.
+            </p>
+            <p>
+              I've worked on a variety of data-driven projects, including real time analytics for
+              stock options and numerous data processing programs for machine learnig models and
+              migrations. Check them all out <a href="#projects">here</a>
+            </p>
+            <div class="skill-text">
+              <h3>Top Skills</h3>
+              <div class="skill-list">
+                <p class="skill">Python</p>
+                <p class="skill">C++</p>
+                <p class="skill">React</p>
+                <p class="skill">Javascript</p>
+                <p class="skill">Git</p>
+                <p class="skill">AWS-SDK</p>
+                <p class="skill">SQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h1 id="projects">Projects</h1>
+      <div class="projects-grid">
+        <div class="project-container">
+          <img class="project-image" src="images/option-analytics.png" />
+          <h3 class="no-margin">Options analytics</h3>
+          <em>built with python and interative brokers API</em>
+          <p>A flight booking tool to minimize airfare on multi-destination trips.</p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="images/spot-social.png" />
+          <h3 class="no-margin">Spotify Social</h3>
+          <em>built with Javascript, React, Flask and Python</em>
+          <p>A Spotify themed instagram clone.</p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="images/flight-connector.png" />
+          <h3 class="no-margin">Flight Connector</h3>
+          <em>built with C++</em>
+          <p>A flight booking tool to minimize airfare on multi-destination trips.</p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="images/spot-script.png" />
+          <h3 class="no-margin">Spotify Analytics</h3>
+          <em>built with python and Spotify API</em>
+          <p>A python script for accessing and visualizing spotify listening data.</p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="images/ml-pipelines.png" />
+          <h3 class="no-margin">ML Pipelines</h3>
+          <em>built with python, pandas, and scikit learn</em>
+          <p>
+            A suite of preprocessing pipelines for preparing ML data. Identifies correlated
+            variables and completes adaptive feature engineering.
+          </p>
+        </div>
+        <div class="project-container">
+          <img class="project-image" src="images/ml-models.png" />
+          <h3 class="no-margin">Machine Learning Models</h3>
+          <em>built with python and Spotify API</em>
+          <p>A script.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h1 class="no-margin" id="experience">Experience</h1>
+      <div class="experience">
+        <div class="job">
+          <h3 class="no-margin">SkySpecs&nbsp</h3>
+          <p class="no-margin">Ann Arbor, MI &middot May - Aug 2023</p>
+        </div>
+        <em>Software Engineer Intern - Fullstack</em>
+        <p>
+          At SkySpecs, I was integrated into the development cycle of the company's cloud app
+          service. As a developer on the execution subteam, I was responsible for implementing new
+          features, fixing time-sensitive bugs, and regularly reviewing team code. Over the summer,
+          I merged code into production for 25 agile stories.
+        </p>
+        <ul class="no-margin">
+          <li>Designed custom asynchronous React hooks using Typescript</li>
+          <li>
+            Implemented several core features of Q2 app release, with constant collaboration to
+            product team
+          </li>
+          <li>
+            Initiated and implemented second version backend services using GraphQL, PostgreSQL, and
+            AWS SDK to optimally handle 2M queries/day
+          </li>
+          <li>Updated ingest pipeline to comprehensively handle event stream</li>
+          <li>
+            Overhauled testing infrastructure from scratch with cypress to expand integration-test
+            coverage by 50% and validate feature changes
+          </li>
+          <li>Leveraged constant feedback from senior developers to enhance quality of code</li>
+        </ul>
+      </div>
+      <div class="experience">
+        <div class="job">
+          <h3 class="no-margin">Applied Educational Systems&nbsp</h3>
+          <p class="no-margin">Lancaster, PA &middot June - Aug 2022</p>
+        </div>
+        <em>Software Engineer Intern - Data Engineering</em>
+        <p>
+          At AES, I worked with the business operations team on a data analytics project. My program
+          provide insights for better targeting of potential clients
+        </p>
+        <ul class="no-margin">
+          <li>
+            Independently migrated company’s customer data from local servers to Google BigQuery
+            tables
+          </li>
+          <li>Implemented a pipeline to stream future data into cloud database from Salesforce</li>
+          <li>Delivered a customized analytics service to provide automated reports</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+    <div class="group">
+      <h1 id="education">Education</h1>
+      <div class="job">
+        <h3 class="no-margin">University of Michigan, College of Engineering&nbsp</h3>
+        <p class="no-margin">Ann Arbor, MI &middot May 2025</p>
+      </div>
+      <em>Bachelor of Science in Engineering, Computer Science; Minor, Math</em>
+    </div>
+
+    <hr />
+    <h2>Skills</h2>
+    <hr />
+    <!-- </div> -->
+  </body>
+</html>
