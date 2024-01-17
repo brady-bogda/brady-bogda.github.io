@@ -74,3 +74,16 @@ async function carousel(carouselList, eleRef) {
     }
   }
 }
+
+// Highlight animation
+// before body
+document.addEventListener('DOMContentLoaded', async function () {
+  let wt = document.querySelector('.hl-anim1');
+  console.log('triggered');
+  await waitForMs(2000);
+  wt.style.setProperty('--bg-width', '100%');
+
+  wt = document.querySelector('.hl-anim2');
+  await waitForMs(5500);
+  wt.style.setProperty('--bg-width', '100%');
+});

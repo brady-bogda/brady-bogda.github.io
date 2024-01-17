@@ -1,7 +1,14 @@
+html {
+	background-color: #F5EFE6;
+}
+
 body {
 	font-family: 'Gilroy', sans-serif;
-	background: #F5EFE6;
 	color: #001f3f;
+}
+
+:root {
+	--bg-width: 0%;
 }
 
 h1, h2, h3, h4 {
@@ -66,15 +73,18 @@ a:hover {
   
 .right-column {
 	flex: 65%;
+	/* background-color: #c1d9ea; */
 	/* flex: 1, 3; */
 	/* flex: 3; */
-	background-color: #c1d9ea;
+	overflow: auto;
 }
 
 .about-text {
 	padding: 2em;
 }
 
+/* ********************************************* */
+/* Typewriter */
 .typing-container {
 	display: flex;
 	justify-content: left;
@@ -100,6 +110,40 @@ a:hover {
 /* .container > div {
 	margin: 20px auto;
 } */
+
+/* ********************************************* */
+/* Highlight animation */
+.hl-anim {
+	position: relative;
+}
+  
+.hl-anim1:before {
+	content: "";
+	position: absolute;
+	/* width: 0%; */
+	width: var(--bg-width);
+	height: 100%;
+	background: #FFCB05;
+	z-index: -1;
+	transition: width 2s ease-in-out;
+}
+
+.hl-anim2:before {
+	content: "";
+	position: absolute;
+	/* width: 0%; */
+	width: var(--bg-width);
+	height: 100%;
+	background: #FFCB05;
+	z-index: -1;
+	transition: width 2s ease-in-out;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
 
 .intro {
 	text-align: left;
