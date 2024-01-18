@@ -1,3 +1,7 @@
+:root {
+	--bg-width: 0%;
+}
+
 html {
 	background-color: #F5EFE6;
 }
@@ -7,9 +11,6 @@ body {
 	color: #001f3f;
 }
 
-:root {
-	--bg-width: 0%;
-}
 
 h1, h2, h3, h4 {
 	font-family: 'Gilroy', sans-serif;
@@ -145,6 +146,57 @@ a:hover {
 	clear: both;
   }
 
+/* ********************************************* */
+/* Scroll animation */
+#section01 a {
+	padding-top: 60px;
+}
+
+#section01 a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #001f3f;
+	border-bottom: 1px solid #001f3f;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	box-sizing: border-box;
+	animation: jumpInfinite 1.5s infinite;
+} 
+
+.demo a {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #001f3f;
+	/* font : normal 400 20px/1 'Josefin Sans', sans-serif; */
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+  }
+
+  .demo a:hover {
+	opacity: .5;
+  }
+
+@keyframes jumpInfinite {
+	0% {
+		margin-top: 0;
+	}
+	50% {
+		margin-top: 20px;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
 .intro {
 	text-align: left;
 }
@@ -299,6 +351,7 @@ a:hover {
 	width: 40px;
 	height: 40px;
 	transition: all ease-in-out .2s;
+        margin: 5px;
 }
 
 .icon-picture:hover {

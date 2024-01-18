@@ -1,22 +1,22 @@
-const html = document.documentElement;
-const mountain = document.getElementById('mountain-picture');
-const mtn = document.getElementsByClassName('mountain');
+// const html = document.documentElement;
+// const mountain = document.getElementById('mountain-picture');
+// const mtn = document.getElementsByClassName('mountain');
 
-const frameCount = 410;
+// const frameCount = 410;
 
-const updateImage = index => {
-  //   console.log('bottom: ' + -index + 'px');
-  mountain.style.bottom = -index + 'px';
-};
+// const updateImage = index => {
+//   //   console.log('bottom: ' + -index + 'px');
+//   mountain.style.bottom = -index + 'px';
+// };
 
-window.addEventListener('scroll', () => {
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+// window.addEventListener('scroll', () => {
+//   const scrollTop = html.scrollTop;
+//   const maxScrollTop = html.scrollHeight - window.innerHeight;
+//   const scrollFraction = scrollTop / maxScrollTop;
+//   const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
 
-  requestAnimationFrame(() => updateImage(frameIndex + 1));
-});
+//   requestAnimationFrame(() => updateImage(frameIndex + 1));
+// });
 
 $(document).ready(async function () {
   carousel(carouselText, '#sentence');
@@ -79,11 +79,18 @@ async function carousel(carouselList, eleRef) {
 // before body
 document.addEventListener('DOMContentLoaded', async function () {
   let wt = document.querySelector('.hl-anim1');
-  console.log('triggered');
   await waitForMs(2000);
   wt.style.setProperty('--bg-width', '100%');
 
   wt = document.querySelector('.hl-anim2');
   await waitForMs(5500);
   wt.style.setProperty('--bg-width', '100%');
+});
+
+// Scroll function
+$(function () {
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+  });
 });
