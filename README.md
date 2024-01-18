@@ -2,7 +2,7 @@
 
 ## Personal Website
 
-Check it out [here](www.brady-bogda.github.io)
+Check it out [here](https://brady-bogda.github.io)
 
 ### Installation
 
