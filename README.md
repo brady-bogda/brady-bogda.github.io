@@ -13,5 +13,5 @@ Follow [instructions](https://jekyllrb.com/docs/) to install Jekyll
 To run development server locally:
 
 ```bash
-jekyll exec bundle serve
+jekyll exec bundle serve --livereload
 ```
