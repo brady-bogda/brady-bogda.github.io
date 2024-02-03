@@ -278,10 +278,20 @@ a:hover {
 	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
 	/* border-radius: 10px; */
 }
+.project-container:hover {
+	border: 0px solid #000000;
+	padding: 1em;
+	width: 400px;
+	scale: 1.05;
+	transition: all ease-in-out .2s;
+	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	/* border-radius: 10px; */
+}
 
 .project-image {
 	width: 400px;
 	height: 300px;
+	scale: 1;
 	border-radius: 5px;
 	transition: all ease-in-out .2s;
 	/* padding: 1em; */
