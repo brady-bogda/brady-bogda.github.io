@@ -244,6 +244,13 @@ a:hover {
 	text-align: left;
 	text-decoration: none
 }
+
+.files {
+	align-items: end;
+	display: flex;
+	flex-direction: row;
+	/* margin-top: auto; */
+}
 /* ********************************************* */
 /* Experience */
 .experience {
