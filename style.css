@@ -3,17 +3,17 @@
 }
 
 html {
-	background-color: #F5EFE6;
+	background-color: #f7f3ec;
 }
 
 body {
-	font-family: 'Gilroy', sans-serif;
+	font-family: 'Gilroy-Light', sans-serif;
 	color: #001f3f;
 }
 
 
 h1, h2, h3, h4 {
-	font-family: 'Gilroy', sans-serif;
+	font-family: 'Nexa',  sans-serif;
 }
 
 h1 {
@@ -34,7 +34,8 @@ h3 {
 
 p, li {
 	font-size: 130%;
-}
+	line-height: 1.4;
+  }
 
 .quote {
 	font-style: italic;
@@ -47,7 +48,8 @@ p, li {
 a:link, a:visited, a:active {
 	text-decoration: none;
 	color: #001f3f;
-}
+} 
+
 
 a:hover {
 	text-decoration: none;
@@ -224,11 +226,17 @@ a:hover {
 }
 
 .skill {
-	border-radius: 10px;
-	border: 3px solid #f5e1aa;
-	background-color: #f5e1aa;
-	padding: 5px;
-}
+	padding: 10px 20px;
+	font-size: 1.1em;
+	border: 2px solid #001f3f;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease;
+  }
+  .skill:hover {
+	box-shadow: 0 5px 10px #f5e1aa;
+	transform: scale(1.05);
+  }
+  
 /* ********************************************* */
 
 .about-grid {
@@ -283,6 +291,7 @@ a:hover {
 	width: 400px;
 	transition: all ease-in-out .2s;
 	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	filter: brightness(95%);
 	/* border-radius: 10px; */
 }
 .project-container:hover {
@@ -292,6 +301,7 @@ a:hover {
 	scale: 1.05;
 	transition: all ease-in-out .2s;
 	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	filter: brightness(100%);
 	/* border-radius: 10px; */
 }
 
